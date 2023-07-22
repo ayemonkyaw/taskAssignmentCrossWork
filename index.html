@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pigeonlab - Frontend takehome assignment v2 from crossworks!</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+    <div class="container" id="container">
+        <div class="form-container register-container">
+            <form id="registration-form">
+                <h2>Create Account</h2>
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="email" class="form-control" placeholder="Enter your email"
+                        required>
+                </div>
+                <div class="form-group">
+                    <label for="password">Password</label>
+                    <input type="password" id="password" name="password" class="form-control"
+                        placeholder="Enter your password" minlength="6"  required  onkeyup="password_check();">
+                </div>
+                <div class="form-group">
+                    <label for="confirm_password">Confirm Password</label>
+                    <input type="password" id="confirm_password" name="confirm_password" class="form-control"
+                        placeholder="Confirm your password" required onkeyup="password_check();">
+                </div>
+                <span id='message'></span>
+                <div class="form-group">
+                    <button type="submit" class="btn">Create</button>
+                </div>
+                <span class="text-right"><a href="javascript:void(0);" id="signin">Already have an account?</a></span>
+            </form>
+        </div>
+        <div class="form-container signin-container">
+            <form id="signin-form">
+                <h2 class="text-center">Sign in</h2>
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="email" class="form-control" placeholder="Enter email">
+                </div>
+                <div class="form-group">
+                    <label for="password">Password</label>
+                    <input type="password" id="password" name="password" class="form-control"
+                        placeholder="Enter password" minlength="6">
+                        
+                </div>
+                <div class="form-group">
+                    <button type="submit" class="btn">Login</button>
+                </div>
+
+                <span class="text-right"><a href="javascript:void(0);" id="register">Create account</a></span>
+            </form>
+        </div>
+        <div class="overlay-container">
+            <div class="overlay">
+                <div class="overlay-panel overlay-left">
+                    <h1>Let get you started</h1>
+                    <p>Be part of our awesome team and have fun with us</p>
+                </div>
+                <div class="overlay-panel overlay-right">
+                    <h1>Hello There</h1>
+                    <p>Don't have an account? <br>Sing up with us today!</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/script.js"></script>
+</body>
+
+</html>
